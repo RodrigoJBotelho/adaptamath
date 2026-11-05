@@ -1,0 +1,31 @@
+:root {
+  --tinta: #1b2540; --linha: #c9d3e6; --marca-texto: #ffe45c;
+  --certo: #1f7a4d; --erro: #b3261e;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; color: var(--tinta); font: 18px/1.5 "Atkinson Hyperlegible", Arial, sans-serif;
+  background-color: #fbfdff;
+  background-image: linear-gradient(rgba(70,110,190,.14) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(70,110,190,.14) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+main { max-width: 720px; margin: 0 auto; padding: 40px 20px 80px; }
+h1 { font-size: 2.6rem; margin: 0; letter-spacing: -.02em; }
+.sub { margin: 4px 0 28px; max-width: 46ch; }
+.abas { display: flex; gap: 8px; margin-bottom: 16px; }
+.abas button { margin-top: 0; background: #fff; color: var(--tinta); border: 2px solid var(--tinta); }
+.abas button.ativa { background: var(--tinta); color: #fff; }
+section { background: #fff; border: 1px solid var(--linha); border-radius: 6px; padding: 24px; }
+label { display: block; font-weight: 700; margin: 16px 0 6px; }
+label:first-child { margin-top: 0; }
+input, select { width: 100%; font: inherit; padding: 10px 12px; border: 2px solid var(--linha); border-radius: 6px; }
+button { font: inherit; font-weight: 700; padding: 10px 20px; margin-top: 16px; cursor: pointer;
+  background: var(--tinta); color: #fff; border: 2px solid var(--tinta); border-radius: 6px; }
+button:disabled { opacity: .5; cursor: default; }
+:focus-visible { outline: 3px solid #2f4bd8; outline-offset: 2px; }
+.destaque, #saida .resposta { background: var(--marca-texto); padding: 8px 16px; border-radius: 4px; overflow-x: auto; }
+#saida .passo { padding: 4px 0; overflow-x: auto; }
+#saida, #expressao { margin-top: 16px; }
+.erro { color: var(--erro); font-weight: 700; }
+.certo { color: var(--certo); font-weight: 700; }

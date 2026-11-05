@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdaptaMath</title>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+<main>
+  <h1>AdaptaMath</h1>
+  <p class="sub">Cálculo feito em Python e exercícios que acompanham o seu nível.</p>
+
+  <div class="abas">
+    <button id="aba-resolver" class="ativa" type="button">Resolver</button>
+    <button id="aba-praticar" type="button">Praticar</button>
+  </div>
+
+  <section id="resolver">
+    <form id="form-resolver">
+      <label for="modo">O que você quer fazer?</label>
+      <select id="modo">
+        <option value="equacao">Resolver equação</option>
+        <option value="derivada">Derivar</option>
+        <option value="integral">Integrar</option>
+        <option value="fatorar">Fatorar</option>
+      </select>
+      <label for="entrada">Expressão (exemplo: 2x + 3 = 7)</label>
+      <input id="entrada" autocomplete="off" required>
+      <button type="submit">Resolver</button>
+    </form>
+    <div id="saida" aria-live="polite"></div>
+  </section>
+
+  <section id="praticar" hidden>
+    <p id="nivel"></p>
+    <p id="instrucao"></p>
+    <div id="expressao" class="destaque"></div>
+    <form id="form-praticar">
+      <label for="resposta">Sua resposta</label>
+      <input id="resposta" autocomplete="off" required>
+      <button type="submit">Responder</button>
+    </form>
+    <p id="feedback" aria-live="polite"></p>
+    <button id="proximo" type="button" hidden>Próximo exercício</button>
+  </section>
+</main>
+</body>
+</html>
